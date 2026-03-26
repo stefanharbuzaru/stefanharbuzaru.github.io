@@ -1,311 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Stefan Harbuzaru – Data & Digital Operations | Marketing Automation">
+  <title>CV – Stefan Harbuzaru</title>
 
-  <title>Resume - Stefan Harbuzaru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;400i;800;800i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1F4E79;
+      --primary-mid: #2E75B6;
+      --primary-light: #D6E4F0;
+      --accent: #E8A020;
+      --sidebar-width: 17rem;
+      --text-dark: #1a1a2e;
+      --text-mid: #444;
+      --text-light: #777;
+    }
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    * { box-sizing: border-box; }
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    body {
+      font-family: 'Muli', sans-serif;
+      color: var(--text-dark);
+      background: #f8f9fc;
+      padding-top: 0;
+    }
 
+    /* ── SIDEBAR ───────────────────────────────── */
+    #sideNav {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-width);
+      height: 100vh;
+      background: linear-gradient(160deg, var(--primary) 0%, #0a2a4a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    .profile-img-wrap {
+      width: 9rem; height: 9rem;
+      border-radius: 50%;
+      border: 4px solid var(--primary-mid);
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 0 0 6px rgba(46,117,182,.25);
+    }
+    .profile-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .profile-img-wrap .initials {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary-mid);
+      letter-spacing: 2px;
+    }
+
+    .nav-name {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .nav-name span { color: var(--primary-mid); display: block; }
+
+    .nav-links { width: 100%; list-style: none; padding: 0; margin: 0 0 2rem 0; }
+    .nav-links li { margin-bottom: .25rem; }
+    .nav-links a {
+      display: block;
+      padding: .45rem 1rem;
+      border-radius: 6px;
+      color: rgba(255,255,255,.7);
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(46,117,182,.25);
+      color: #fff;
+      padding-left: 1.4rem;
+    }
+
+    .social-icons-side { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+    .social-icons-side a {
+      width: 2.2rem; height: 2.2rem;
+      border-radius: 50%;
+      border: 2px solid rgba(46,117,182,.5);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.6);
+      font-size: .85rem;
+      text-decoration: none;
+      transition: all .2s;
+    }
+    .social-icons-side a:hover {
+      border-color: var(--primary-mid);
+      color: #fff;
+      background: rgba(46,117,182,.3);
+      transform: translateY(-2px);
+    }
+
+    /* ── MAIN CONTENT ──────────────────────────── */
+    .main-content {
+      margin-left: var(--sidebar-width);
+      padding: 0;
+    }
+
+    .resume-section {
+      padding: 4rem 3.5rem;
+      border-bottom: 1px solid #e3eaf4;
+      background: #fff;
+    }
+    .resume-section:nth-child(even) { background: #f8f9fc; }
+
+    /* ── ABOUT ──────────────────────────────────── */
+    #about {
+      background: linear-gradient(135deg, #fff 60%, #eef4fb 100%);
+      padding-top: 5rem;
+    }
+    #about h1 {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--text-dark);
+      margin-bottom: .3rem;
+    }
+    #about h1 .text-primary { color: var(--primary) !important; }
+    .subheading {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary-mid);
+      margin-bottom: 1rem;
+    }
+    .about-profile { font-size: .95rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem; }
+
+    /* Tags */
+    .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; }
+    .tag {
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: .3rem .75rem;
+      border-radius: 20px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid #b8d0e8;
+    }
+    .tag.accent { background: #fff4e0; color: #b07000; border-color: #f0d090; }
+
+    /* ── SECTION TITLES ─────────────────────────── */
+    .section-title {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: .2rem;
+      letter-spacing: .5px;
+    }
+    .section-divider {
+      width: 3rem; height: 4px;
+      background: linear-gradient(90deg, var(--primary-mid), var(--primary-light));
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── EXPERIENCE ─────────────────────────────── */
+    .exp-item { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #edf2f8; }
+    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: .5rem; margin-bottom: .4rem; }
+    .exp-title { font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); margin: 0; }
+    .exp-period {
+      font-size: .8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-mid);
+      background: var(--primary-light);
+      padding: .25rem .75rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .exp-company { font-size: 1rem; font-weight: 800; color: var(--text-mid); text-transform: uppercase; letter-spacing: 1px; margin-bottom: .8rem; }
+    .exp-bullets { list-style: none; padding: 0; margin: 0; }
+    .exp-bullets li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: .45rem;
+      font-size: .9rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: .65em;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--primary-mid);
+    }
+
+    /* ── SKILLS ──────────────────────────────────── */
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .skill-group h4 { font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 1rem; }
+    .skill-tag {
+      display: inline-block;
+      font-size: .78rem;
+      font-weight: 800;
+      padding: .35rem .8rem;
+      margin: .25rem .2rem .25rem 0;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid #c2d9ef;
+      transition: all .2s;
+    }
+    .skill-tag:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
+    .skill-tag.hot { background: #fff4e0; color: #9a6200; border-color: #f5d78e; }
+
+    /* ── EDUCATION ───────────────────────────────── */
+    .edu-item { margin-bottom: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; }
+    .edu-icon {
+      width: 3rem; height: 3rem;
+      border-radius: 12px;
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      border: 1px solid #c2d9ef;
+    }
+    .edu-body h3 { font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 0 0 .1rem; }
+    .edu-body .edu-degree { font-size: .9rem; font-weight: 800; color: var(--text-mid); margin-bottom: .1rem; }
+    .edu-body .edu-period { font-size: .78rem; color: var(--text-light); }
+
+    /* ── CERTIFICATIONS ─────────────────────────── */
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cert-card {
+      padding: 1.2rem 1.4rem;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #dce8f5;
+      border-left: 4px solid var(--primary-mid);
+      display: flex; align-items: center; gap: 1rem;
+      transition: box-shadow .2s;
+    }
+    .cert-card:hover { box-shadow: 0 4px 16px rgba(30,70,120,.1); }
+    .cert-icon { font-size: 1.6rem; color: var(--accent); flex-shrink: 0; }
+    .cert-text { font-size: .85rem; font-weight: 800; color: var(--text-dark); line-height: 1.4; }
+
+    /* ── LANGUAGES ───────────────────────────────── */
+    .lang-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .lang-item { text-align: center; }
+    .lang-circle {
+      width: 5rem; height: 5rem;
+      border-radius: 50%;
+      border: 3px solid var(--primary-mid);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      margin: 0 auto .5rem;
+      background: var(--primary-light);
+    }
+    .lang-circle .lang-flag { font-size: 1.6rem; line-height: 1; }
+    .lang-name { font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); }
+    .lang-level { font-size: .7rem; color: var(--text-light); margin-top: .2rem; }
+
+    /* ── PROJECTS ────────────────────────────────── */
+    .proj-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    .proj-card {
+      padding: 1.4rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary-light), #fff);
+      border: 1px solid #c8ddf0;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .proj-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(30,70,120,.12); }
+    .proj-card i { font-size: 1.5rem; color: var(--primary-mid); margin-bottom: .75rem; display: block; }
+    .proj-card p { font-size: .85rem; color: var(--text-mid); margin: 0; line-height: 1.5; }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 991px) {
+      #sideNav { position: relative; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; padding: 1rem; justify-content: space-between; }
+      .profile-img-wrap { width: 4rem; height: 4rem; margin: 0; }
+      .nav-name { font-size: .9rem; margin: 0; }
+      .nav-links { display: flex; flex-direction: row; flex-wrap: wrap; gap: .25rem; width: auto; margin: 0; }
+      .nav-links a { padding: .3rem .7rem; font-size: .68rem; }
+      .main-content { margin-left: 0; }
+      .resume-section { padding: 2.5rem 1.5rem; }
+      .skills-grid, .cert-grid, .proj-cards { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
-<body id="page-top">
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Stefan Harbuzaru</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li>
-      </ul>
+  <!-- ── SIDEBAR ────────────────────────────────── -->
+  <nav id="sideNav">
+    <div class="profile-img-wrap">
+      <span class="initials">SH</span>
+    </div>
+    <div class="nav-name">Stefan <span>Harbuzaru</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#languages">Languages</a></li>
+    </ul>
+    <div class="social-icons-side">
+      <a href="https://www.linkedin.com/in/stefan-harbuzaru-93002011a" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/stfhrb" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:stefan.harbuzaru@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/40746871146" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </nav>
 
-  <div class="container-fluid p-0">
+  <!-- ── MAIN ───────────────────────────────────── -->
+  <div class="main-content">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Stefan
-          <span class="text-primary">Harbuzaru</span>
-        </h1>
-        <div class="subheading mb-5">Iasi, Romania - <a href="tel:+40746871146">+40 746871146 </a> -
-          <a href="mailto:stefan.harbuzaru@gmail.com">stefan.harbuzaru@gmail.com</a>
-        </div>
-        <p class="lead mb-5">I am an experienced Data Entry coder.
-          <br>In the present I am studying Software Quality Assurance and I would like to become a certified software tester.</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/stefan-harbuzaru-93002011a/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.facebook.com/Ste.Hrb">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://github.com/stfhrb">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://wa.me/40746871146">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="skype:live:.cid.748b10a8bfb2dbc5">
-            <i class="fab fa-skype"></i>
-          </a>
-
-
-
-        </div>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-
-
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Babysitter</h3>
-            <div class="subheading mb-3">@home</div>
-            <p>Paternal leave, taking care of my newborn baby. </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">April 2019 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Data entry</h3>
-            <div class="subheading mb-3">GFK ROMANIA</div>
-            <p>Advanced research by brand, model, OEM and EAN on different product groups (Deskcomputing, Mobilecomputing and Tablets). Updating and correcting the information contained in the databases. Coding the new products: Verifying, sorting and compiling the information to prepare the source data</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2016 - April 2019</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Label machine operator</h3>
-            <div class="subheading mb-3">United colors of benetton</div>
-            <p>Maintenance of computers and printers. Loading commands. Product verification in accordance with the technical documentation.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2013 - August 2015</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Desktop/Network/Mobile Tehnician</h3>
-            <div class="subheading mb-3">Freelance</div>
-            <p>Setting up computers and attachi­ng peripherals -Configuring hardware and applications -Installing, upgrading, and migrating to Windows 7, 8, 10 -Perform troubleshooting, repair, and preventative maintenance of end user computing equipment and peripheral equipment -Provide network printers and scanner network connectivity, including providing network support for device configuration, for IP addressing, and direct TCP/IP output</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2009 - August 2014</span>
-          </div>
-        </div>
-
+    <!-- ABOUT -->
+    <section class="resume-section" id="about">
+      <h1 class="mb-0">Stefan <span class="text-primary">Harbuzaru</span></h1>
+      <div class="subheading mb-2">Data &amp; Digital Operations &nbsp;|&nbsp; Marketing Automation</div>
+      <div class="mb-3" style="font-size:.9rem;color:var(--text-mid);">
+        <i class="fas fa-map-marker-alt mr-2" style="color:var(--primary-mid)"></i>Iași, Romania &nbsp;&nbsp;
+        <a href="tel:+40746871146" style="color:var(--text-mid);text-decoration:none;"><i class="fas fa-phone mr-1" style="color:var(--primary-mid)"></i>+40 746 871 146</a> &nbsp;&nbsp;
+        <a href="mailto:stefan.harbuzaru@gmail.com" style="color:var(--primary-mid);"><i class="fas fa-envelope mr-1"></i>stefan.harbuzaru@gmail.com</a>
       </div>
 
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Enered It Academy</h3>
-            <div class="subheading mb-3">Software Quality Assurance</div>
-            <div>Software Tester</div>
-
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2019 - February 2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Giuseppe Peano High School</h3>
-            <div class="subheading mb-3">Turin, Italy</div>
-            <div>Applied science</div>
-
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2004 - June 2009</span>
-          </div>
-        </div>
-
+      <div class="tag-row">
+        <span class="tag">5+ Years Experience</span>
+        <span class="tag">SQL &amp; Python</span>
+        <span class="tag">Elastic / Kibana</span>
+        <span class="tag">Stibo MDM</span>
+        <span class="tag accent">→ Salesforce Marketing Cloud</span>
+        <span class="tag accent">→ Marketing Automation</span>
       </div>
+
+      <p class="about-profile">Data-driven professional with 5+ years of experience in data analysis, digital content, and technical operations within international environments. Strong technical background including SQL, HTML, JSON, Python, and data processing tools, combined with hands-on experience in content syndication and large-scale data workflows for clients such as <strong>Lenovo</strong>, <strong>Vodafone</strong>, and <strong>MediaMarkt</strong>.</p>
+      <p class="about-profile">Experienced in working with large datasets (Elastic/Kibana), building automation tools, performing data transformations (Excel, Power Query), and managing data flows across systems including Master Data Management platforms such as Stibo. Currently transitioning towards <strong>Marketing Automation</strong> and <strong>Salesforce Marketing Cloud</strong>, aiming to leverage both technical and analytical expertise in campaign execution, audience segmentation, and performance optimization.</p>
     </section>
 
-    <hr class="m-0">
+    <!-- EXPERIENCE -->
+    <section class="resume-section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="section-divider"></div>
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-           <i class="fab fa-java"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fas fa-database"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-git-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-jira"></i>
-          </li>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Project Manager – Data &amp; Digital Operations</h3>
+          <span class="exp-period">Feb 2023 – Present</span>
+        </div>
+        <div class="exp-company"><i class="fas fa-building mr-2" style="color:var(--primary-mid)"></i>IDNTT &nbsp;·&nbsp; Iași, Romania</div>
+        <ul class="exp-bullets">
+          <li>Managed data-driven projects for international clients (Lenovo, Vodafone, MediaMarkt)</li>
+          <li>Coordinated cross-functional teams using Agile methodologies and JIRA</li>
+          <li>Oversaw data mapping and integration processes between multiple systems (including Stibo MDM and external databases)</li>
+          <li>Ensured data quality, consistency, and accurate data flows across platforms</li>
+          <li>Acted as liaison between business and technical stakeholders</li>
+          <li>Improved operational workflows and reduced manual processes</li>
         </ul>
+      </div>
 
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-           <i class="fab fa-bootstrap"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-wordpress"></i>
-          </li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Data Analyst</h3>
+          <span class="exp-period">Nov 2021 – Mar 2023</span>
+        </div>
+        <div class="exp-company"><i class="fas fa-building mr-2" style="color:var(--primary-mid)"></i>IDNTT</div>
+        <ul class="exp-bullets">
+          <li>Analyzed large datasets using Elastic (Kibana) and Excel for Vodafone projects</li>
+          <li>Processed and interpreted millions of records beyond standard Excel limitations</li>
+          <li>Used SQL queries for data extraction and validation</li>
+          <li>Built data transformations using Excel and Power Query</li>
+          <li>Supported decision-making through data insights and reporting</li>
+        </ul>
+      </div>
 
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            <div class="glowing">
-                <span>C</span>
-                <span>O</span>
-                <span>M</span>
-                <span>M</span>
-                <span>I</span>
-                <span>N</span>
-                <span>G</span>
-                <span>-</span>
-                <span>S</span>
-                <span>O</span>
-                <span>O</span>
-                <span>N</span>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Web Content Editor</h3>
+          <span class="exp-period">Feb 2021 – Nov 2021</span>
+        </div>
+        <div class="exp-company"><i class="fas fa-building mr-2" style="color:var(--primary-mid)"></i>IDNTT</div>
+        <ul class="exp-bullets">
+          <li>Edited and structured digital content using HTML and JSON</li>
+          <li>Managed product data and content through Contentful and Stibo Systems (MDM)</li>
+          <li>Ensured correct data mapping and consistency across platforms</li>
+          <li>Performed technical adjustments to content and validated output</li>
+        </ul>
+      </div>
 
-            </div>
-            </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            ... </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            ...</li>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Data Entry Supervisor</h3>
+          <span class="exp-period">Oct 2020 – Feb 2021</span>
+        </div>
+        <div class="exp-company"><i class="fas fa-building mr-2" style="color:var(--primary-mid)"></i>IDNTT</div>
+        <ul class="exp-bullets">
+          <li>Led data mapping activities for large-scale database migration (MediaMarkt / MediaWorld)</li>
+          <li>Supervised data entry processes and ensured data accuracy</li>
+          <li>Coordinated team activities and monitored performance</li>
+        </ul>
+      </div>
 
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3 class="exp-title">Senior Data Entry</h3>
+          <span class="exp-period">May 2017 – Apr 2019</span>
+        </div>
+        <div class="exp-company"><i class="fas fa-building mr-2" style="color:var(--primary-mid)"></i>GfK</div>
+        <ul class="exp-bullets">
+          <li>Processed and validated large volumes of structured data</li>
+          <li>Ensured data accuracy and compliance with internal standards</li>
+          <li>Advanced research by brand, model, OEM and EAN on different product groups</li>
         </ul>
       </div>
     </section>
 
-    <hr class="m-0">
+    <!-- EDUCATION -->
+    <section class="resume-section" id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="section-divider"></div>
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>My dream is to become a Software Tester.</p>
-        <p class="mb-0">I follow a number of sci-fi and fantasy genre movies and television shows, I like playing games on my console, and I spend a large amount of my free time exploring the latest technology advancements.</p>
+      <div class="edu-item">
+        <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="edu-body">
+          <h3>EnerEd IT Academy</h3>
+          <div class="edu-degree">Software Quality Assurance</div>
+          <div class="edu-period"><i class="far fa-calendar-alt mr-1"></i>2019 – 2020</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-icon"><i class="fas fa-school"></i></div>
+        <div class="edu-body">
+          <h3>I.T.I.S G. Peano</h3>
+          <div class="edu-degree">Diploma di Maturità, Liceo Scientifico</div>
+          <div class="edu-period"><i class="fas fa-map-marker-alt mr-1"></i>Turin, Italy &nbsp;·&nbsp; <i class="far fa-calendar-alt mr-1"></i>2004 – 2009</div>
+        </div>
       </div>
     </section>
 
-    <hr class="m-0">
+    <!-- SKILLS -->
+    <section class="resume-section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="section-divider"></div>
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li><i class="fa-li fa fa-trophy text-warning"></i> EnerEd IT Academy-Software Quality Assurance</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            <li>
-            <a href=https://analytics.google.com/analytics/academy/certificate/HeQzFsrUQRmAAjLgfTLlfw>Google Analytics for Beginners</a></li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Fundamentals of Digital Marketing</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Cambridge Assessment English-Preliminary English Test</li>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Data &amp; Analytics</h4>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Elastic / Kibana</span>
+          <span class="skill-tag">Power Query</span>
+          <span class="skill-tag">Advanced Excel</span>
+          <span class="skill-tag">Data Mapping</span>
+          <span class="skill-tag">Data Migration</span>
 
-        </ul>
+          <h4 class="mt-3">Languages &amp; Code</h4>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">JSON</span>
+          <span class="skill-tag">Basic PHP</span>
+          <span class="skill-tag">Git / GitHub</span>
+
+          <h4 class="mt-3">Tools &amp; Platforms</h4>
+          <span class="skill-tag">Contentful</span>
+          <span class="skill-tag">Stibo MDM</span>
+          <span class="skill-tag">JIRA</span>
+          <span class="skill-tag">Adobe Photoshop</span>
+        </div>
+        <div class="skill-group">
+          <h4>Marketing &amp; Automation</h4>
+          <span class="skill-tag hot">Salesforce Marketing Cloud</span>
+          <span class="skill-tag hot">Marketing Automation</span>
+          <span class="skill-tag">Audience Segmentation</span>
+          <span class="skill-tag">Campaign Execution</span>
+
+          <h4 class="mt-3">Methodologies</h4>
+          <span class="skill-tag">Agile</span>
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">Cross-team Coordination</span>
+          <span class="skill-tag">Stakeholder Management</span>
+        </div>
       </div>
     </section>
 
-  </div>
+    <!-- TECHNICAL PROJECTS -->
+    <section class="resume-section" id="projects">
+      <h2 class="section-title">Technical Projects</h2>
+      <div class="section-divider"></div>
+      <div class="proj-cards">
+        <div class="proj-card">
+          <i class="fab fa-python"></i>
+          <p><strong>Python Automation Tools</strong><br>Developed automation scripts to improve workflow efficiency and reduce manual data processing tasks.</p>
+        </div>
+        <div class="proj-card">
+          <i class="fab fa-github"></i>
+          <p><strong>Version Control</strong><br>Managed code repositories with GitHub, applying branching strategies and collaborative workflows.</p>
+        </div>
+        <div class="proj-card">
+          <i class="fas fa-code"></i>
+          <p><strong>Data Scripting</strong><br>Applied scripting and data handling techniques in practical scenarios — including transformations and batch processing.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- CERTIFICATIONS -->
+    <section class="resume-section" id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      <div class="section-divider"></div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <div class="cert-text">Google Ads Display Certification<br><span style="color:var(--text-light);font-weight:400">Google Digital Academy</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <div class="cert-text">Google Analytics for Beginners<br><span style="color:var(--text-light);font-weight:400">Google</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <div class="cert-text">Fundamentals of Digital Marketing<br><span style="color:var(--text-light);font-weight:400">Google</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-vial"></i></div>
+          <div class="cert-text">Software Testing Quiz<br><span style="color:var(--text-light);font-weight:400">Pentalog HR</span></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- LANGUAGES -->
+    <section class="resume-section" id="languages">
+      <h2 class="section-title">Languages</h2>
+      <div class="section-divider"></div>
+      <div class="lang-row">
+        <div class="lang-item">
+          <div class="lang-circle"><span class="lang-flag">🇷🇴</span></div>
+          <div class="lang-name">Romanian</div>
+          <div class="lang-level">Native</div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-circle"><span class="lang-flag">🇬🇧</span></div>
+          <div class="lang-name">English</div>
+          <div class="lang-level">Professional</div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-circle"><span class="lang-flag">🇮🇹</span></div>
+          <div class="lang-name">Italian</div>
+          <div class="lang-level">Professional</div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
+  </div><!-- /main-content -->
+
+  <footer style="margin-left:var(--sidebar-width);background:#f0f4f9;padding:1.2rem 3.5rem;font-size:.8rem;color:var(--text-light);border-top:1px solid #dde6f0;">
+    © 2025 Stefan Harbuzaru &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/stefan-harbuzaru-93002011a" style="color:var(--primary-mid);text-decoration:none;">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://github.com/stfhrb" style="color:var(--primary-mid);text-decoration:none;">GitHub</a>
+  </footer>
+
+  <script>
+    // Active nav highlight on scroll
+    const sections = document.querySelectorAll('.resume-section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
+  </script>
 
 </body>
-<footer>
-  <div class= "container-footer">
-  <p style="text-align:center"> © 2020 Stefan Harbuzaru<a href="https://github.com/stefanharbuzaru">
-    <i class="fab fa-github"></i>
-  </a>
-  </p>
-</div>
-</footer>
 </html>
